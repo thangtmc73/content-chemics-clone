@@ -1,0 +1,60 @@
+.container {
+  position: absolute;
+  // height: 100vh;
+  height: 100vh;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+
+
+  .content {
+    display: flex;
+    align-items: center;
+    color: black;
+
+    .bigText {
+      font-size: 20vw;
+      text-transform: uppercase;
+    }
+    .animationView {
+      height: 5vw;
+      transition: width 0.3s;
+      overflow: hidden;
+      line-height: 126%;
+      font-size: 4vw;
+      p {
+        height: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        transition: transform 0.3s;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 479px) {
+      .bigText {
+        font-size: 28vw;
+      }
+      .animationView {
+        height: 13vw;
+        font-size: 10vw;
+      }
+    }
+  }
+
+}
+
+.hide {
+  animation: moveUp 1s linear 1 forwards;
+}
+
+@keyframes moveUp {
+  100% {
+    top: -100%;
+  }
+}
