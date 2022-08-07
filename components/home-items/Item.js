@@ -1,25 +1,8 @@
-import { useState } from "react";
-import className from "utils/className";
 import styles from "./HomeItems.module.scss";
 
 export default function Item({ title, description, videoSource }) {
-  const [hovering, setHovering] = useState(false);
-  const handleMouseOver = () => {
-    console.log("hovering");
-    // setHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    // setHovering(false);
-  };
-
   return (
-    <li
-      className={className(styles.item, hovering && styles.hovering)}
-      key={title}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
-    >
+    <li className={styles.item} key={title}>
       <div className={styles.videoContainer}>
         <video
           playsInline={true}
