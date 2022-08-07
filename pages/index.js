@@ -1,6 +1,52 @@
 import Head from "next/head";
 import Overlay from "components/overlay";
+import HomeItems from "components/home-items";
 import styles from "../styles/Home.module.scss";
+
+const homeItems = [
+  {
+    title: "Dress Code",
+    description: "Production by Design",
+    videoSource:
+      "https://player.vimeo.com/external/545638628.hd.mp4?s=d31893ceb0ddf69f61e735e41d665f06f1a54fb7&amp;profile_id=174",
+  },
+  {
+    title: "Stept Studios",
+    description: "Content Creation",
+    videoSource:
+      "https://player.vimeo.com/external/525168202.hd.mp4?s=6c1e9c29d82702c0e2502333209a361e5e84ca26&amp;profile_id=174",
+  },
+  {
+    title: "Neighborhood Watch",
+    description: "Production",
+    videoSource:
+      "https://player.vimeo.com/progressive_redirect/playback/723888289/rendition/720p/file.mp4?loc=external&amp;signature=cc4af5450a869e61270cb8b52f3ba55bc09e450ac26a55de4d5c479bf9a184af",
+  },
+  {
+    title: "Lockt Editorial",
+    description: "Post-Production",
+    videoSource:
+      "https://player.vimeo.com/progressive_redirect/playback/736282235/rendition/720p/file.mp4?loc=external&amp;signature=c3464b69da7456e791592e27e84082393a175bb4566590f37b1ceef3b0bd1592",
+  },
+  {
+    title: "Barking Owl",
+    description: "Music and Sound",
+    videoSource:
+      "https://player.vimeo.com/external/595565788.hd.mp4?s=121f7144966d887717465150c3e1736a060ce765&amp;profile_id=174",
+  },
+  {
+    title: "Love Song",
+    description: "Production",
+    videoSource:
+      "https://player.vimeo.com/external/595433264.hd.mp4?s=c07f0d5949c232e5660b8d36975fef466dd47e60&amp;profile_id=174",
+  },
+  {
+    title: "Picrow",
+    description: "Production",
+    videoSource:
+      "https://player.vimeo.com/progressive_redirect/playback/725855536/rendition/1080p/file.mp4?loc=external&amp;signature=a3453aec2bce28c9841ed720c531c5fa8226bf55cc8c77908569d14b62e9d699",
+  },
+];
 
 export default function Home() {
   return (
@@ -15,6 +61,7 @@ export default function Home() {
         rightText={"Chemics"}
         animationTexts={["Representation", "Management", "Development"]}
       />
+      <HomeItems data={homeItems} />
     </div>
   );
 }
