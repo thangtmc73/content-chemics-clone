@@ -1,6 +1,8 @@
 .container {
   color: white;
   list-style: none;
+  z-index: 10;
+
   .item {
     margin-bottom: 0.07vw;
     padding-top: 0.2vw;
