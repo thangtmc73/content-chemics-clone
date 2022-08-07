@@ -41,7 +41,9 @@
       align-items: center;
     }
     .title {
-      display: none;
+      p {
+        display: none;
+      }
     }
     .description { 
       font-size: 1.6vw;
