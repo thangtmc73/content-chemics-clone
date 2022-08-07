@@ -21,13 +21,13 @@ const homeItems = [
     title: "Neighborhood Watch",
     description: "Production",
     videoSource:
-      "https://player.vimeo.com/progressive_redirect/playback/723888289/rendition/720p/file.mp4?loc=external&amp;signature=cc4af5450a869e61270cb8b52f3ba55bc09e450ac26a55de4d5c479bf9a184af",
+      "https://vod-progressive.akamaized.net/exp=1659891782~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4777%2F28%2F723888289%2F3366028768.mp4~hmac=d32ad19b299415690c6606c6bc92df6d55c658d0f5e46d7ff5cc87b5cf8a8079/vimeo-prod-skyfire-std-us/01/4777/28/723888289/3366028768.mp4?filename=file.mp4",
   },
   {
     title: "Lockt Editorial",
     description: "Post-Production",
     videoSource:
-      "https://player.vimeo.com/progressive_redirect/playback/736282235/rendition/720p/file.mp4?loc=external&amp;signature=c3464b69da7456e791592e27e84082393a175bb4566590f37b1ceef3b0bd1592",
+      "https://download-video.akamaized.net/playback/6cee0d97-b34d-476a-adbb-6873fec67aa5/fe784d5c-bb5f8044?__token__=st=1659877547~exp=1659891947~acl=%2Fplayback%2F6cee0d97-b34d-476a-adbb-6873fec67aa5%2Ffe784d5c-bb5f8044%2A~hmac=17e5e45f11d7071f07dbae667a7da9cf68daa0eebce5e07224056148ed74980f&r=dXM%3D",
   },
   {
     title: "Barking Owl",
@@ -45,7 +45,7 @@ const homeItems = [
     title: "Picrow",
     description: "Production",
     videoSource:
-      "https://player.vimeo.com/progressive_redirect/playback/725855536/rendition/1080p/file.mp4?loc=external&amp;signature=a3453aec2bce28c9841ed720c531c5fa8226bf55cc8c77908569d14b62e9d699",
+      "https://download-video.akamaized.net/playback/e383fd8e-2f6d-4b40-ae19-1a3550d357e3/4e0d8957-dc590cd1?__token__=st=1659877473~exp=1659891873~acl=%2Fplayback%2Fe383fd8e-2f6d-4b40-ae19-1a3550d357e3%2F4e0d8957-dc590cd1%2A~hmac=2a1197ebbae5e6894a8908d84b435b4071fe970f85bd3668d4634e3022f1568a&r=dXM%3D",
   },
 ];
 
