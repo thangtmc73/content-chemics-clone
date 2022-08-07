@@ -2,6 +2,7 @@ import Head from "next/head";
 import Overlay from "components/overlay";
 import HomeItems from "components/home-items";
 import styles from "../styles/Home.module.scss";
+import { useState } from "react";
 
 const homeItems = [
   {
@@ -49,6 +50,7 @@ const homeItems = [
 ];
 
 export default function Home() {
+  const [overlayVisible, setOverlayVisible] = useState(true);
   return (
     <div className={styles.container}>
       <Head>
@@ -57,6 +59,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Overlay
+        visible={overlayVisible}
+        show={() => setOverlayVisible(true)}
+        hide={() => setOverlayVisible(false)}
         leftText={"Content"}
         rightText={"Chemics"}
         animationTexts={["Representation", "Management", "Development"]}

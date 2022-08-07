@@ -9,8 +9,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-
-
+  z-index: 100;
 
   .content {
     display: flex;
@@ -50,7 +49,7 @@
 }
 
 .hide {
-  animation: moveUp 1s linear 1 forwards;
+  animation: moveUp 0.55s linear 1 forwards;
 }
 
 @keyframes moveUp {

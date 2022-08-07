@@ -2,8 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import className from "utils/className";
 import styles from "./Overlay.module.scss";
 
-function Overlay({ leftText, rightText, animationTexts }) {
-  const [visible, setVisible] = useState(true);
+function Overlay({ visible, show, hide, leftText, rightText, animationTexts }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const timeoutRef = useRef(null);
@@ -11,26 +10,26 @@ function Overlay({ leftText, rightText, animationTexts }) {
     setScreenWidth(window.innerWidth);
     function handleWindowResize() {
       setScreenWidth(window.innerWidth);
-      setVisible(true);
+      show && show();
     }
     window.addEventListener("resize", handleWindowResize);
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
-  }, []);
+  }, [show]);
 
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
       if (activeIndex === animationTexts.length - 1) {
-        setVisible(false);
+        hide && hide();
         return;
       }
       setActiveIndex((index) => index + 1);
-    }, 1000);
+    }, 550);
     return () => {
       clearTimeout(timeoutRef.current);
     };
-  }, [activeIndex, animationTexts]);
+  }, [activeIndex, animationTexts, hide]);
 
   return (
     <div className={className(styles.container, !visible && styles.hide)}>
