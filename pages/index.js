@@ -66,7 +66,7 @@ export default function Home() {
         rightText={"Chemics"}
         animationTexts={["Representation", "Management", "Development"]}
       />
-      <HomeItems data={homeItems} />
+      <HomeItems visible={!overlayVisible} data={homeItems} />
     </div>
   );
 }

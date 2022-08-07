@@ -1,9 +1,10 @@
 import Item from "./Item";
+import className from "utils/className";
 import styles from "./HomeItems.module.scss";
 
-function HomeItems({ data }) {
+function HomeItems({ data, visible }) {
   return (
-    <ul className={styles.container}>
+    <ul className={className(styles.container, visible && styles.visible)}>
       {data.map((item) => {
         const { title, description, videoSource } = item;
         return (

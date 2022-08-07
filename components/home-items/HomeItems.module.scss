@@ -1,6 +1,7 @@
 .container {
   color: white;
   list-style: none;
+  display: none;
   z-index: 10;
 
   .item {
@@ -9,6 +10,7 @@
     padding-bottom: 0.2vw;
     font-size: 4.2vw;
     height: 4.5vw;
+    overflow: hidden;
     .videoContainer {
       display: flex;
       width: 0vw;
@@ -18,8 +20,8 @@
       right: 0;
     }
     .title {
+      display: none;
       padding-left: 8vw;
-      display: block;
       text-transform: uppercase;
     }
     .loopContainer {
@@ -64,8 +66,6 @@
       }
     }
 
-    
-
     .loopItem {
       display: flex;
       align-items: center;
@@ -80,6 +80,26 @@
     @keyframes news {
       0% {transform: translateX(0);}
       100% {transform: translateX(-100%);}
+    }
+  }
+}
+
+.container.visible {
+  display: block;
+  .item {
+    .title {
+      display: block;
+      animation:  fadeInUp 1s linear 0s 1 forwards;
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      transform: translate3d(0,100%,0)
+    }
+
+    to {
+      transform: translate3d(0,0,0);
+      opacity: 1
     }
   }
 }
