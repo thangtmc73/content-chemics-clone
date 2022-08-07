@@ -32,7 +32,7 @@
       }
     }
   }
-  .item:hover .item:active .item:focus {
+  .item:hover, .item:active, .item:focus {
     .videoContainer{
       display: flex;
       width: 50vw;
